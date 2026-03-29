@@ -1,0 +1,36 @@
+[project]
+name = "osc-load-tester"
+version = "0.1.0"
+description = "A simple project to load test pyopensoundcontrol"
+authors = [
+    {name = "Morph Tollon",email = "code@morphtollon.co.uk"}
+]
+
+maintainers = [
+    { name = "Morph Tollon", email = "code@morphtollon.co.uk"}
+]
+keywords = ["osc", "sound", "midi", "music", "sockets", "transport", "Lighting", "Theatre"]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "oscparser (>=2.0.4,<3.0.0)"
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "W1", "W2", "F", "RUF", "I"]
+
+[tool.ruff]
+line-length = 127
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+exclude = [".venv"]
