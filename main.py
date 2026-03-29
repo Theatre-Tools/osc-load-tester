@@ -42,7 +42,7 @@ if transport == 'tcp':
             print(i)
             ## choose a random ascii character
             
-            msg = OSCMessage(address=f"/benchmark/{random.choice('abcdefghijklmnopqrstuvwxyz1234567890')}{random.choice('abcdefghijklmnopqrstuvwxyz1234567890')}{random.choice('abcdefghijklmnopqrstuvwxyz1234567890')}{random.choice('abcdefghijklmnopqrstuvwxyz1234567890')}{random.choice('abcdefghijklmnopqrstuvwxyz1234567890')}/wildcards", args=())
+            msg = OSCMessage(address=f"/benchmark/cache/wildcards", args=())
             encoded_msg = encoder.encode(msg)
             client_socket.sendall(encoded_msg)
         client_socket.close()
