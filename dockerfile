@@ -10,8 +10,6 @@ RUN poetry install
 
 COPY . .
 
-RUN poetry install
-
 EXPOSE 9000
 
 CMD ["poetry", "run", "python3", "main.py"]
